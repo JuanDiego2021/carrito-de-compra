@@ -29,7 +29,7 @@
     <div class="row" id="cards"></div>
   </div>
 
-  <template id="template-footer">
+  <template id="template-footer" >
       <th scope="row" colspan="2">Total productos</th>
       <td>10</td>
       <td>
@@ -62,13 +62,22 @@
     </div>
 
     <template id="template-card">
-        <div class="col-12 mb-2 col-md-4">
+        <div class="col-1 mb-2 col-md-3">
           <div class="card">
             <img src="" alt="" class="card-img-top">
             <div class="card-body">
               <h5>Titulo</h5>
               <p>precio</p>
-              <button class="btn btn-dark">Comprar</button>
+              <button class="btn btn-primary">Comprar</button>
+              <button class="btn btn-danger">Dejar  </button>
+
+              <table class="table">
+                <tr>
+                <td>#</td>
+                <td>cantidad</td>
+                <td>total</td>
+                </tr>
+              </table>
             </div>
           </div>
         </div>

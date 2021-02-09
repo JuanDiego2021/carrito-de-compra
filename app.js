@@ -32,7 +32,7 @@ const pintarCards = data => {
         templateCard.querySelector("h5").textContent = producto.title
         templateCard.querySelector("p").textContent = producto.precio
         templateCard.querySelector("img").setAttribute("src", producto.thumbnailUrl)
-        templateCard.querySelector(".btn-dark").dataset.id = producto.id
+        templateCard.querySelector(".btn-primary").dataset.id = producto.id
         const clone = templateCard.cloneNode (true)
         fragment.appendChild (clone)
     });
@@ -40,14 +40,14 @@ const pintarCards = data => {
 } 
 
 const addCarrito = e =>{ 
-    if (e.target.classList.contains("btn-dark")){
+    if (e.target.classList.contains("btn-primary")){
         setCarrito(e.target.parentElement) 
     }
     e.stopPropagation()
 }
 const setCarrito = objeto => {
     const producto= {
-        id: objeto.querySelector(".btn-dark").dataset.id,
+        id: objeto.querySelector(".btn-primary").dataset.id,
         title: objeto.querySelector ("h5").textContent,
         precio: objeto.querySelector ("p").textContent,
         cantidad: 1
